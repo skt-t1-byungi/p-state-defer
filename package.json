@@ -1,0 +1,13 @@
+{
+  "name": "p-state-defer",
+  "version": "0.0.0",
+  "module": "index.mjs",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-byungi": "^0.0.12"
+  },
+  "eslintConfig": {
+    "extends": "byungi"
+  }
+}
