@@ -1,10 +1,14 @@
 {
   "name": "p-state-defer",
-  "description": "",
+  "description": "A deferred promise with current state",
   "author": {
     "name": "skt-t1-byungi",
     "email": "tiniwz@gmail.com"
   },
+  "keywords": [
+    "promise",
+    "deferred"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/skt-t1-byungi/p-state-defer.git"
@@ -19,7 +23,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -d",
-    "test": "tsc && ava"
+    "test": "tsc && ava",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "ava": "^0.25.0",

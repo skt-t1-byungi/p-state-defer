@@ -1,5 +1,5 @@
 export default class Deferred<T> {
-  private _state = 'pending'
+  private _state: 'pending' | 'resolved' | 'rejected' = 'pending'
   private _promise: Promise<T>
   private _resolve!: (v: T) => void
   private _reject!: (err: any) => void
@@ -30,10 +30,10 @@ export default class Deferred<T> {
     this._resolve(val)
   }
 
-  public reject (err: any) {
+  public reject (reason: any) {
     if (this.isCompleted) return
 
     this._state = 'rejected'
-    this._reject(err)
+    this._reject(reason)
   }
 }
