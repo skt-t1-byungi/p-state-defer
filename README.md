@@ -17,7 +17,7 @@ function loadImage(url){
   // Unlike Promise, Indent is not required.
   const defer = new Defer();
 
-  const img = new Image(url)
+  const img = new Image()
   img.src = url
   img.onload = _ => defer.resolve(img)
   img.onerror = _ => defer.reject(new Error('Failed to load image.'))
