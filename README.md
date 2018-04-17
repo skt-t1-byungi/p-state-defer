@@ -11,7 +11,7 @@ yarn add p-state-defer
 ## Usage
 ### Basic
 ```js
-const Defer = require('p-state-defer')
+const Defer = require('p-state-defer').default
 
 function loadImage(url){
   // Unlike Promise, Indent is not required.
