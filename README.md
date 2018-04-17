@@ -1,6 +1,8 @@
 # p-state-defer
 A deferred promise with current state
 
+[![npm](https://img.shields.io/npm/v/p-state-defer.svg?style=flat-square)](https://www.npmjs.com/package/p-state-defer)
+
 ## Install
 ```sh
 yarn add p-state-defer
