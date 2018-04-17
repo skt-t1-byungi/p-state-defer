@@ -16,7 +16,7 @@
   "files": [
     "dist"
   ],
-  "version": "0.0.6-0",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
