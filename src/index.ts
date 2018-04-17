@@ -2,7 +2,7 @@ export default class Deferred<T> {
   private _state: 'pending' | 'resolved' | 'rejected' = 'pending'
   private _promise: Promise<T>
   private _resolve!: (v: T) => void
-  private _reject!: (err: any) => void
+  private _reject!: (reason: any) => void
 
   constructor () {
     this._promise = new Promise((resolve, reject) => {
