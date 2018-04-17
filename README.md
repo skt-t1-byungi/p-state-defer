@@ -7,6 +7,12 @@ A deferred promise with current state
 ```sh
 yarn add p-state-defer
 ```
+```js
+// esm
+import Defer from 'p-state-defer'
+// or commonjs
+const Defer = require('p-state-defer').default
+```
 
 ## Usage
 ### Basic
