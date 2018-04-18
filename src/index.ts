@@ -1,4 +1,4 @@
-export default class Deferred<T> {
+export class Deferred<T> {
   private _state: 'pending' | 'resolved' | 'rejected' = 'pending'
   private _promise: Promise<T>
   private _resolve!: (v: T) => void
@@ -37,3 +37,5 @@ export default class Deferred<T> {
     this._reject(reason)
   }
 }
+
+export default Deferred

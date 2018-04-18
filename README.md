@@ -9,19 +9,17 @@ yarn add p-state-defer
 ```
 ```js
 // esm
-import Defer from 'p-state-defer'
+import Deferred from 'p-state-defer'
 // or commonjs
-const Defer = require('p-state-defer').default
+const {Deferred} = require('p-state-defer')
 ```
 
 ## Usage
 ### Basic
 ```js
-const Defer = require('p-state-defer').default
-
 function loadImage(url){
   // Unlike Promise, Indent is not required.
-  const defer = new Defer();
+  const defer = new Deferred();
 
   const img = new Image()
   img.src = url
@@ -34,7 +32,7 @@ function loadImage(url){
 
 ### State
 ```js
-const defer = new Defer();
+const defer = new Deferred();
 
 console.log( defer.isCompleted ) // false
 console.log( defer.state ) // "pending"
