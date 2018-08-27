@@ -1,6 +1,6 @@
 {
   "name": "p-state-defer",
-  "description": "A deferred promise with current state",
+  "description": "A deferred promise with state",
   "author": {
     "name": "skt-t1-byungi",
     "email": "tiniwz@gmail.com"

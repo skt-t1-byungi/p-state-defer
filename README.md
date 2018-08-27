@@ -1,5 +1,5 @@
 # p-state-defer
-A deferred promise with current state
+A deferred promise with state
 
 [![npm](https://img.shields.io/npm/v/p-state-defer.svg?style=flat-square)](https://www.npmjs.com/package/p-state-defer)
 [![npm](https://img.shields.io/npm/dt/p-state-defer.svg?style=flat-square)](https://www.npmjs.com/package/p-state-defer)
