@@ -69,10 +69,10 @@ Returns current state.
 Returns whether completed or not.
 
 ### Methods
-##### resolve(value: T)
+#### resolve(value: T)
 Resolve promise.
 
-##### reject(reason: any)
+#### reject(reason: any)
 Reject promise.
 
 ## License
