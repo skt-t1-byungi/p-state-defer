@@ -14,7 +14,8 @@
     "url": "https://github.com/skt-t1-byungi/p-state-defer.git"
   },
   "files": [
-    "dist"
+    "dist/index.js",
+    "dist/index.d.ts"
   ],
   "version": "0.0.7",
   "main": "dist/index.js",
