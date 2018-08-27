@@ -2,6 +2,7 @@
 A deferred promise with current state
 
 [![npm](https://img.shields.io/npm/v/p-state-defer.svg?style=flat-square)](https://www.npmjs.com/package/p-state-defer)
+[![npm](https://img.shields.io/npm/dt/p-state-defer.svg?style=flat-square)](https://www.npmjs.com/package/p-state-defer)
 
 ## Install
 ```sh
@@ -11,14 +12,14 @@ yarn add p-state-defer
 // esm
 import Deferred from 'p-state-defer'
 // or commonjs
-const {Deferred} = require('p-state-defer')
+const Deferred = require('p-state-defer')
 ```
 
 ## Usage
 ### Basic
 ```js
 function loadImage(url){
-  // Unlike Promise, Indent is not required.
+  // Unlike Promise, No Indent!
   const defer = new Deferred();
 
   const img = new Image()
@@ -39,23 +40,40 @@ console.log( defer.state ) // "pending"
 
 defer.resolve('hello')
 
-console.log( defer.isCompleted ) // true
-console.log( defer.state ) // "resolved". If call the reject, it will be "rejected".
+console.log( defer.isCompleted ) // => true
+console.log( defer.state ) // => "resolved"
 ```
 
 
 ## API
-#### Defer<T>
-Constructor.
+### Deferred<T>
+Deferred Constructor.
 
-##### Properties
-###### promise : Promise<T>
-###### state : 'pending' | 'resolved' | 'rejected'
-###### isCompleted : boolean
+```js
+const defer = new Deferred();
+```
 
-##### Methods
-###### resolve(value: T)
-###### reject(reason: any)
+### Properties
+
+#### promise : Promise<T>
+Returns Promise.
+
+```js
+defer.promise.then(...)
+```
+
+#### state : 'pending' | 'resolved' | 'rejected'
+Returns current state.
+
+#### isCompleted : boolean
+Returns whether completed or not.
+
+### Methods
+##### resolve(value: T)
+Resolve promise.
+
+##### reject(reason: any)
+Reject promise.
 
 ## License
 MIT

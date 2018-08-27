@@ -1,4 +1,7 @@
-export class Deferred<T> {
+class Deferred<T> {
+  public static default = Deferred
+  public static Deferred = Deferred
+
   private _state: 'pending' | 'resolved' | 'rejected' = 'pending'
   private _promise: Promise<T>
   private _resolve!: (v: T) => void
@@ -38,4 +41,4 @@ export class Deferred<T> {
   }
 }
 
-export default Deferred
+export = Deferred
