@@ -1,11 +1,11 @@
-class Deferred<T> {
+ export = class Deferred<T> {
     public static default = Deferred
     public static Deferred = Deferred
 
     private _state: 'pending' | 'resolved' | 'rejected' = 'pending'
     private _promise: Promise<T>
-    private _resolve!: (v: T) => void
-    private _reject!: (reason: any) => void
+    private _resolve!: (value?: T | PromiseLike<T>) => void
+    private _reject!: (reason?: any) => void
 
     constructor () {
         this._promise = new Promise((resolve, reject) => {
@@ -26,19 +26,17 @@ class Deferred<T> {
         return this._state !== 'pending'
     }
 
-    public resolve (val: T) {
+    public resolve (val?: T | PromiseLike<T>) {
         if (this.isCompleted) return
 
         this._state = 'resolved'
         this._resolve(val)
     }
 
-    public reject (reason: any) {
+    public reject (reason?: any) {
         if (this.isCompleted) return
 
         this._state = 'rejected'
         this._reject(reason)
     }
 }
-
-export = Deferred
