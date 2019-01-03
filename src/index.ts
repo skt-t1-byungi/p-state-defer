@@ -1,10 +1,12 @@
- export = class Deferred<T> {
+export = Deferred
+
+class Deferred<T> {
     public static default = Deferred
     public static Deferred = Deferred
 
     private _state: 'pending' | 'resolved' | 'rejected' = 'pending'
     private _promise: Promise<T>
-    private _resolve!: (value?: T | PromiseLike<T>) => void
+    private _resolve!: (val?: T | PromiseLike<T>) => void
     private _reject!: (reason?: any) => void
 
     constructor () {
