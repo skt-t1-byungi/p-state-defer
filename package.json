@@ -14,7 +14,7 @@
     "engines": {
         "node": ">= 6"
     },
-    "version": "0.1.2",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
