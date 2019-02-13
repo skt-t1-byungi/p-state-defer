@@ -1,18 +1,18 @@
 # p-state-defer
 A deferred promise with state
 
-[![npm](https://img.shields.io/npm/v/p-state-defer.svg?style=flat-square)](https://www.npmjs.com/package/p-state-defer)
-[![npm](https://img.shields.io/npm/dt/p-state-defer.svg?style=flat-square)](https://www.npmjs.com/package/p-state-defer)
+[![npm](https://flat.badgen.net/npm/v/p-state-defer)](https://www.npmjs.com/package/p-state-defer)
 
 ## Install
 ```sh
-yarn add p-state-defer
+npm i p-state-defer
 ```
 ```js
 // esm
 import Deferred from 'p-state-defer'
-// or commonjs
-const Deferred = require('p-state-defer')
+
+// or cjs
+const {Deferred} = require('p-state-defer')
 ```
 
 ## Usage
